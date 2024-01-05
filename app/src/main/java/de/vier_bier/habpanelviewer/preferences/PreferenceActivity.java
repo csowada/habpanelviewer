@@ -1,10 +1,15 @@
 package de.vier_bier.habpanelviewer.preferences;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,6 +29,8 @@ import de.vier_bier.habpanelviewer.ScreenControllingActivity;
  */
 public class PreferenceActivity extends ScreenControllingActivity implements PreferenceCallback {
     private static final String TAG_NESTED = "TAG_NESTED";
+
+    private static final String TAG = "HPV-MainActivityXXX";
 
     private Toolbar mToolbar;
     private MenuItem mUpItem;
@@ -89,11 +96,20 @@ public class PreferenceActivity extends ScreenControllingActivity implements Pre
         int id = item.getItemId();
 
         if (id == R.id.action_pref_export) {
+
+            if (!Environment.isExternalStorageManager()) {
+                //request for the permission
+                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                Uri uri = Uri.fromParts("package", getPackageName(), null);
+                intent.setData(uri);
+                startActivity(intent);
+            }
+
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                        Constants.REQUEST_WRITE_EXTERNAL_STORAGE);
+                        Constants.REQUEST_MANAGE_EXTERNAL_STORAGE);
             } else {
                 PreferenceUtil.saveSharedPreferencesToFile(this, mToolbar);
             }
@@ -102,6 +118,15 @@ public class PreferenceActivity extends ScreenControllingActivity implements Pre
         }
 
         if (id == R.id.action_pref_import) {
+
+            if (!Environment.isExternalStorageManager()) {
+                //request for the permission
+                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                Uri uri = Uri.fromParts("package", getPackageName(), null);
+                intent.setData(uri);
+                startActivity(intent);
+            }
+
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this,
