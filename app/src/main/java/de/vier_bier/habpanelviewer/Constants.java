@@ -14,6 +14,8 @@ public final class Constants {
     public static final int REQUEST_VALIDATE = 205;
     public static final int REQUEST_RECORD_AUDIO = 206;
 
+    public static final int REQUEST_MANAGE_EXTERNAL_STORAGE = 207;
+
     /** Intent related constants **/
     public static final String INTENT_FLAG_CRASH = "crash";
     public static final String INTENT_FLAG_RESTART_COUNT = "restartCount";
