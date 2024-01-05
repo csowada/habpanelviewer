@@ -1,5 +1,16 @@
 # <img alt="Logo" src="app/src/main/res/mipmap-hdpi/ic_launcher.png" border="0"> HABPanelViewer
 
+---
+
+#### This is a fork to fix some issues on new Android versions (13)
+
+Fixes:
+
+- Crash on Item select
+- Unable to find import/export files from extern sources
+
+---
+
 #### At the end of 2021, I have stopped maintenance and development of the app.
 
 An openHAB integrated kiosk browser.
