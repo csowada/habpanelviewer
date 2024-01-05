@@ -8,7 +8,7 @@
         android:defaultValue="false"
         android:summary="@string/pref_proximityEnabled_summ"
         android:title="@string/pref_proximityEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_proximity_item"
         android:dependency="pref_proximity_enabled"
         android:inputType="textPhonetic"

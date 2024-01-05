@@ -8,7 +8,7 @@
         android:defaultValue="false"
         android:summary="@string/pref_accelerometerEnabled_summ"
         android:title="@string/pref_accelerometerEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_accelerometer_item"
         android:dependency="pref_accelerometer_enabled"
         android:inputType="textPhonetic"

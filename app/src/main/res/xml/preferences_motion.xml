@@ -8,7 +8,7 @@
         android:defaultValue="false"
         android:summary="@string/pref_motionEnabled_summ"
         android:title="@string/pref_motionEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_motion_item"
         android:dependency="pref_motion_detection_enabled"
         android:inputType="textPhonetic"

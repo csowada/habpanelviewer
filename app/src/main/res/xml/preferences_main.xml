@@ -15,10 +15,9 @@
         android:persistent="false"
         android:title="@string/pref_camera" />
 
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_command_item"
         android:summary="@string/pref_commandItem_summ"
-        android:inputType="textPhonetic"
         android:title="@string/pref_commandItem" />
 
     <Preference

@@ -8,7 +8,7 @@
         android:defaultValue="false"
         android:summary="@string/pref_volumeEnabled_summ"
         android:title="@string/pref_volumeEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_volume_item"
         android:dependency="pref_volume_enabled"
         android:inputType="textPhonetic"

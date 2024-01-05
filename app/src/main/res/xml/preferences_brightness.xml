@@ -8,7 +8,7 @@
         android:defaultValue="false"
         android:summary="@string/pref_brightnessEnabled_summ"
         android:title="@string/pref_brightnessEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_brightness_item"
         android:dependency="pref_brightness_enabled"
         android:inputType="textPhonetic"

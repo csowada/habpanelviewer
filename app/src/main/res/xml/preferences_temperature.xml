@@ -8,7 +8,7 @@
         android:defaultValue="false"
         android:summary="@string/pref_temperatureEnabled_summ"
         android:title="@string/pref_temperatureEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_temperature_item"
         android:dependency="pref_temperature_enabled"
         android:inputType="textPhonetic"

@@ -8,7 +8,7 @@
         android:defaultValue="false"
         android:summary="@string/pref_usageEnabled_summ"
         android:title="@string/pref_usageEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_usage_item"
         android:dependency="pref_usage_enabled"
         android:inputType="textPhonetic"

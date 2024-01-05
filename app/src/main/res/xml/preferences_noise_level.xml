@@ -9,7 +9,7 @@
         android:key="pref_noise_level_enabled"
         android:summary="@string/pref_noiseLevelEnabled_summ"
         android:title="@string/pref_noiseLevelEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_noise_level_item"
         android:dependency="pref_noise_level_enabled"
         android:inputType="textPhonetic"

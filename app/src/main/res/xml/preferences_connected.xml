@@ -10,7 +10,7 @@
             android:defaultValue="false"
             android:summary="@string/pref_startupEnabled_summ"
             android:title="@string/pref_startupEnabled" />
-        <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+        <EditTextPreference
             android:key="pref_startup_item"
             android:dependency="pref_startup_enabled"
             android:summary="@string/pref_startupItem_summ"
@@ -25,7 +25,7 @@
             android:defaultValue="false"
             android:summary="@string/pref_connectedEnabled_summ"
             android:title="@string/pref_connectedEnabled" />
-        <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+        <EditTextPreference
             android:key="pref_connected_item"
             android:dependency="pref_connected_enabled"
             android:summary="@string/pref_connectedItem_summ"
@@ -47,7 +47,7 @@
             android:defaultValue="false"
             android:summary="@string/pref_currentUrlEnabled_summ"
             android:title="@string/pref_currentUrlEnabled" />
-        <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+        <EditTextPreference
             android:key="pref_current_url_item"
             android:dependency="pref_current_url_enabled"
             android:summary="@string/pref_currentUrlItem_summ"

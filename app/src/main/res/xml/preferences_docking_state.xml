@@ -8,7 +8,7 @@
         android:defaultValue="false"
         android:summary="@string/pref_dockingStateEnabled_summ"
         android:title="@string/pref_dockingStateEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_docking_state_item"
         android:dependency="pref_docking_state_enabled"
         android:inputType="textPhonetic"

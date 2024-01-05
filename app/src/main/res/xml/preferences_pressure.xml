@@ -8,7 +8,7 @@
         android:defaultValue="false"
         android:summary="@string/pref_pressureEnabled_summ"
         android:title="@string/pref_pressureEnabled" />
-    <de.vier_bier.habpanelviewer.preferences.AutocompleteTextPreference
+    <EditTextPreference
         android:key="pref_pressure_item"
         android:dependency="pref_pressure_enabled"
         android:inputType="textPhonetic"
